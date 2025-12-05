@@ -5,83 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Artes em Camadas 3D</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #f5f5f5; }
-    header { background: #111; color: #fff; padding: 20px; text-align: center; }
-    nav { display: flex; gap: 20px; justify-content: center; padding: 15px; background: #222; }
-    nav a { color: #fff; text-decoration: none; font-weight: bold; }
-    .hero { background: linear-gradient(135deg, #111, #444); color: white; padding: 100px 20px; text-align: center; }
-    .hero h1 { font-size: 48px; margin: 0; }
-    .section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    footer { background: #111; color: white; padding: 20px; text-align: center; margin-top: 40px; }
-    /* Botão WhatsApp */
-    #whats { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; padding: 15px 20px; border-radius: 50px; font-size: 18px; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,.3);}    
-    /* Carrossel */
-    .carousel { width: 100%; overflow: hidden; position: relative; }
-    .carousel-track { display: flex; animation: slide 12s infinite linear; }
-    .carousel img { width: 300px; height: auto; margin-right: 20px; border-radius: 10px; }
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0a0f24;
+      color: #ffffff;
+    }
+
+    header {
+      background: #0d1b3d;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 3px solid #4fa3ff;
+    }
+
+    header img {
+      height: 70px;
+    }
+
+    nav a {
+      color: #4fa3ff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 50px 10%;
+    }
+
+    h1, h2 {
+      color: #4fa3ff;
+    }
+
+    .servicos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #111b33;
+      padding: 20px;
+      border-radius: 15px;
+      border: 2px solid #4fa3ff;
+    }
+
+    footer {
+      background: #0d1b3d;
+      padding: 20px;
+      text-align: center;
+      border-top: 3px solid #4fa3ff;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h2>Artes em Camadas 3D</h2>
-    <p>Impressões 3D • Projetos Personalizados • 
+    <img src="logo.png" alt="Logo Artes em Camadas 3D" />
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#servicos">Serviços</a>
-    <a href="#portfolio">Portfólio</a>
-    <a href="#contato">Contato</a>
-    <a href="#localizacao">Localização</a>
-  </nav>
-
-  <section class="hero">
-    <h1>Transformamos Ideias em Realidade 3D</h1>
-    <p>Peças únicas, personalizadas e produzidas com precisão</p>
+  <section id="sobre">
+    <h1>Artes em Camadas 3D</h1>
+    <p>
+      Somos especialistas em transformar ideias em peças únicas através da impressão 3D.
+      Trabalhamos com alta qualidade, precisão e acabamento profissional para entregar produtos duradouros e visualmente impressionantes.
+      Criamos peças artesanais em camadas, trazendo profundidade, estilo e identidade em cada projeto.
+    </p>
   </section>
 
-  <section id="servicos" class="section">
+  <section id="servicos">
     <h2>Serviços</h2>
-    <div class="grid">
-      <div class="card"><h3>Impressão 3D</h3><p>Modelos decorativos, funcionais, peças para cosplay, reposição e mais.</p></div>
-      <div class="card"><h3>Modelagem</h3><p>Criação de projetos sob medida baseado na sua ideia.</p></div>
-      <div class="card"><h3>Acabamento e Pintura</h3><p>Pintura profissional, efeitos metálicos, weathering e customização.</p></div>
-    </div>
-  </section>
+    <div class="servicos">
+      <div class="card">
+        <h3>Impressão 3D em Camadas</h3>
+        <p>
+          Produção detalhada de peças decorativas, placas, ornamentos, esculturas e muito mais, sempre com acabamento limpo e preciso.
+        </p>
+      </div>
 
-  <section id="portfolio" class="section">
-    <h2>Portfólio</h2>
-    <div class="carousel">
-      <div class="carousel-track">
-        <img src="https://placehold.co/300x300" />
-        <img src="https://placehold.co/300x300" />
-        <img src="https://placehold.co/300x300" />
-        <img src="https://placehold.co/300x300" />
+      <div class="card">
+        <h3>Projetos Personalizados</h3>
+        <p>
+          Criamos peças sob medida a partir da sua ideia, referência ou necessidade. Personalização completa!
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Réplica de Personagens</h3>
+        <p>
+          Produção de modelos exclusivos, dioramas e figuras em estilo colecionável.
+        </p>
       </div>
     </div>
   </section>
 
-  <section id="contato" class="section">
+  <section id="contato">
     <h2>Contato</h2>
-    <p>Peça um orçamento ou envie sua ideia!</p>
-    <p>Email: contato@artesemcamadas3d.com</p>
-    <p>Instagram: @artesemcamadas3d</p>
-  </section>
-
-  <section id="localizacao" class="section">
-    <h2>Localização</h2>
-    <p>Mapa aqui (colocarei quando você passar o endereço)</p>
+    <p>Precisa de um orçamento ou quer tirar uma dúvida?</p>
+    <p><strong>WhatsApp:</strong> (11) 98398-7862</p>
   </section>
 
   <footer>
-    © 2025 Artes em Camadas 3D - Todos os direitos reservados
+    © 2025 Artes em Camadas 3D — Criatividade em cada camada.
   </footer>
-
-  <a id="whats" href="https://wa.me/5599999999999" target="_blank">WhatsApp</a>
 </body>
 </html>
