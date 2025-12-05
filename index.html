@@ -1,117 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Artes em Camadas 3D</title>
-
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #222;
-    }
-
-    header {
-      background: #111;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-
-    nav {
-      background: #222;
-      text-align: center;
-      padding: 12px;
-    }
-
-    nav a {
-      color: white;
-      margin: 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .hero {
-      background: #333;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .grid {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .carousel {
-      overflow: hidden;
-      width: 100%;
-      margin-top: 20px;
-    }
-
-    .carousel-track {
-      display: flex;
-      animation: slide 12s infinite linear;
-    }
-
-    .carousel img {
-      width: 300px;
-      height: auto;
-      margin-right: 20px;
-      border-radius: 10px;
-    }
-
+    body { margin: 0; font-family: Arial, sans-serif; background: #f5f5f5; }
+    header { background: #111; color: #fff; padding: 20px; text-align: center; }
+    nav { display: flex; gap: 20px; justify-content: center; padding: 15px; background: #222; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; }
+    .hero { background: linear-gradient(135deg, #111, #444); color: white; padding: 100px 20px; text-align: center; }
+    .hero h1 { font-size: 48px; margin: 0; }
+    .section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    footer { background: #111; color: white; padding: 20px; text-align: center; margin-top: 40px; }
+    /* Botão WhatsApp */
+    #whats { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; padding: 15px 20px; border-radius: 50px; font-size: 18px; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,.3);}    
+    /* Carrossel */
+    .carousel { width: 100%; overflow: hidden; position: relative; }
+    .carousel-track { display: flex; animation: slide 12s infinite linear; }
+    .carousel img { width: 300px; height: auto; margin-right: 20px; border-radius: 10px; }
     @keyframes slide {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
-
-    footer {
-      background: #111;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    #whatsapp {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25d366;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
-      font-size: 18px;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,.3);
-    }
   </style>
 </head>
-
 <body>
-
   <header>
     <h2>Artes em Camadas 3D</h2>
-    <p>Impressões 3D • Projetos Personalizados • Modelagem</p>
+    <p>Impressões 3D • Projetos Personalizados • 
   </header>
 
   <nav>
@@ -126,40 +45,43 @@
     <p>Peças únicas, personalizadas e produzidas com precisão</p>
   </section>
 
-  <section id="servicos">
+  <section id="servicos" class="section">
     <h2>Serviços</h2>
     <div class="grid">
-      <div class="card"><h3>Impressão 3D</h3><p>Modelos decorativos, funcionais e peças sob medida.</p></div>
-      <div class="card"><h3>Modelagem 3D</h3><p>Criação de projetos com base na sua ideia.</p></div>
-      <div class="card"><h3>Acabamento e Pintura</h3><p>Pintura profissional e customização.</p></div>
+      <div class="card"><h3>Impressão 3D</h3><p>Modelos decorativos, funcionais, peças para cosplay, reposição e mais.</p></div>
+      <div class="card"><h3>Modelagem</h3><p>Criação de projetos sob medida baseado na sua ideia.</p></div>
+      <div class="card"><h3>Acabamento e Pintura</h3><p>Pintura profissional, efeitos metálicos, weathering e customização.</p></div>
     </div>
   </section>
 
-  <section id="portfolio">
+  <section id="portfolio" class="section">
     <h2>Portfólio</h2>
     <div class="carousel">
       <div class="carousel-track">
-        <img src="https://placehold.co/300x300">
-        <img src="https://placehold.co/300x300">
-        <img src="https://placehold.co/300x300">
-        <img src="https://placehold.co/300x300">
+        <img src="https://placehold.co/300x300" />
+        <img src="https://placehold.co/300x300" />
+        <img src="https://placehold.co/300x300" />
+        <img src="https://placehold.co/300x300" />
       </div>
     </div>
   </section>
 
-  <section id="contato">
+  <section id="contato" class="section">
     <h2>Contato</h2>
-    <p>Peça um orçamento!</p>
-    <p>E-mail: contato@artesemcamadas3d.com</p>
+    <p>Peça um orçamento ou envie sua ideia!</p>
+    <p>Email: contato@artesemcamadas3d.com</p>
     <p>Instagram: @artesemcamadas3d</p>
   </section>
 
-  <section id="localizacao">
+  <section id="localizacao" class="section">
     <h2>Localização</h2>
-    <p>Envie seu endereço para colocar o mapa aqui.</p>
+    <p>Mapa aqui (colocarei quando você passar o endereço)</p>
   </section>
 
   <footer>
     © 2025 Artes em Camadas 3D - Todos os direitos reservados
   </footer>
-<a id="whatsapp" href="https://wa.me/5599999999999" target="_blank">WhatsApp</a>
+
+  <a id="whats" href="https://wa.me/5599999999999" target="_blank">WhatsApp</a>
+</body>
+</html>
